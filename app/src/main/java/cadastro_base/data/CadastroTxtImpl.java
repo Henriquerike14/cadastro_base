@@ -10,7 +10,7 @@ import cadastro_base.domain.Pessoa;
 
 public class CadastroTxtImpl implements CadastroInterface {
    
-    private String nomeArquivo = "cadastro.txt";
+    private String nomeArquivo = "cadastro2.txt";
    
    
 
@@ -22,7 +22,7 @@ public class CadastroTxtImpl implements CadastroInterface {
             BufferedReader entrada = new BufferedReader(arquivo);
             String linha;
             while((linha = entrada.readLine()) != null) {
-                linhas.add(new Pessoa(linha));
+                linhas.add(new Pessoa(linha,9));
             }
             arquivo.close();
             entrada.close();

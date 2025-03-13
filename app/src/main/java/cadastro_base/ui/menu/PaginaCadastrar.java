@@ -7,8 +7,11 @@ public class PaginaCadastrar {
 
     public static void adicionarPessoa(Scanner scanner) {
         ControleCadastro cadastro = new ControleCadastro();
-        System.out.print("\nCadastre uma pessoa: ");
+        System.out.print("\nCadastre uma pessoa: \nNome:");
         String nome = scanner.nextLine();
-        cadastro.salvar(nome);
+        System.out.print("\nIdade:");
+        int idade = scanner.nextInt();
+
+        cadastro.salvar(nome, idade);
     }
 }

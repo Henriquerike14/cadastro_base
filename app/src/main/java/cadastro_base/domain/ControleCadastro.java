@@ -15,9 +15,10 @@ public class ControleCadastro {
         return this.db.lerArquivo();
     }
 
-    public void salvar(String nome) {
+    public void salvar(String nome, int idade) {
         Pessoa pessoa = new Pessoa();
         pessoa.setNome(nome);
+        pessoa.setIdade(idade);
         this.db.salvar(pessoa);
     }
 
@@ -30,8 +31,9 @@ public class ControleCadastro {
         this.db.excluir(index);
     }
 
-    public void editar(int index , String novoNome) {
-      this.db.editar(index, new Pessoa(novoNome));
+    public void editar(int index , String novoNome, int novaIdade) {
+        this.db.editar(index, new Pessoa(novoNome, novaIdade));
     }
+
 
 }
