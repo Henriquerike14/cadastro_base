@@ -17,7 +17,9 @@ public class PaginaEditar {
                 System.out.println("\nNome atual: " + cadastro.carregarLista().get(index - 1).getNome());
                 System.out.print("Novo nome: ");
                 String nomeEditado = scanner.nextLine();
-                cadastro.editar(index - 1, nomeEditado);
+                System.out.print("Novo idade: ");
+                int novaIdade = scanner.nextInt();
+                cadastro.editar(index - 1, nomeEditado, novaIdade);
             } else {
                 System.out.println("\nOpção inválida, tente novamente");
             }

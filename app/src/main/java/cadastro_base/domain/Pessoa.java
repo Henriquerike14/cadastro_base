@@ -33,7 +33,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return getNome();
+        return getNome() + " - " + getIdade();
     }
 
    

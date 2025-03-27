@@ -22,7 +22,13 @@ public class CadastroTxtImpl implements CadastroInterface {
             BufferedReader entrada = new BufferedReader(arquivo);
             String linha;
             while((linha = entrada.readLine()) != null) {
-                linhas.add(new Pessoa(linha,9));
+
+                String[] dados = linha.split(" - ");
+                if (dados.length != 2) {
+                    System.out.println("Erro ao ler arquivo: " + linha);
+                    continue;
+                }
+                linhas.add(new Pessoa(dados[0], Integer.parseInt(dados[1])));
             }
             arquivo.close();
             entrada.close();

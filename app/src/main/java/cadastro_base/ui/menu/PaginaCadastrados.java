@@ -14,7 +14,7 @@ public  class PaginaCadastrados {
         System.out.print("\nCadastros:\n"); 
         int i = 1;
         for (Pessoa pessoa : lista) {
-             System.out.println(i+". "+pessoa.toString());
+             System.out.println(i+". Nome: "+pessoa.getNome()+" - Idade: "+pessoa.getIdade());
              i++;
     }
 
